@@ -128,10 +128,20 @@
         <plugins>
 
             <!-- Spring Boot WAR -->
+  <!--               
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+-->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <mainClass>com.property.PropertyApplication</mainClass>
+            </configuration>
+        </plugin>
+    
 
             <!-- Compiler -->
             <plugin>
@@ -161,11 +171,11 @@
                 </configuration>
             </plugin>
 
-            <!-- Build Info (CI/CD) -->
+            <!-- Build Info (CI/CD) 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-buildnumber-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.4.0</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -175,9 +185,8 @@
                     </execution>
                 </executions>
             </plugin>
-
+-->
         </plugins>
     </build>
 
 </project>
-
